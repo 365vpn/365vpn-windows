@@ -56,7 +56,7 @@ const formatBytes = (bytes: number): string => {
   return bytes + ' B'
 }
 
-const maskOr = (value: string, visible: boolean): string => {
+const maskOr = (value: string | undefined, visible: boolean): string => {
   if (!value) return '—'
   if (visible) return value
   if (value.length <= 8) return '••••••••'
